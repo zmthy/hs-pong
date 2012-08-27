@@ -1,0 +1,30 @@
+Name:                pong
+Version:             0.1
+Synopsis:            A quick game to test out FRP in Haskell.
+Description:         
+License:             AllRightsReserved
+Author:              Timothy Jones
+Maintainer:          tim@zimothy.com
+Stability:           Experimental
+Category:            Game
+Build-type:          Simple
+Cabal-version:       >=1.2
+
+Flag development
+  Description: Whether to build the game in development mode
+  Default: False
+
+Executable pong
+  hs-source-dirs: src
+  main-is: Main.hs
+
+  Build-depends:
+    base >= 4 && < 5,
+    OpenGL == 2.5.*,
+    GLFW == 0.5.*
+
+  if flag(development)
+    ghc-options: -threaded -w
+  else
+    ghc-options: -threaded -Wall -Werror -fwarn-tabs -fno-warn-orphans
+                 -fno-warn-unused-do-bind -funbox-strict-fields -O2
