@@ -1,4 +1,4 @@
-module Model
+module Game.Model
     (
       -- * Full game state
       Pong (..)

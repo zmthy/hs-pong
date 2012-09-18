@@ -1,4 +1,4 @@
-module Model.Input
+module Game.Model.Input
     (
       -- * Input types
       Direction (..)

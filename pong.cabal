@@ -20,8 +20,13 @@ Executable pong
 
   Build-depends:
     base >= 4 && < 5,
-    OpenGL == 2.5.*,
-    GLFW == 0.5.*
+    transformers == 0.3.*,
+    mtl == 2.*,
+    bytestring == 0.9.*,
+    text == 0.11.2.*,
+    OpenGL >= 2.2.3 && < 2.6,
+    GLUT >= 2.1.2 && < 2.4,
+    reactive-banana == 0.7.*
 
   if flag(development)
     ghc-options: -threaded -w
